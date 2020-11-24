@@ -7,4 +7,6 @@ public class Constants {
     public static final String CALCULATOR = "calculator";
     // ユーザ一覧画面
     public static final String USER_LIST = "userList";
+    // テスト
+    public static final String TEST = "test";
 }
