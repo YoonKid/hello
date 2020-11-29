@@ -11,8 +11,7 @@ import static com.Constants.USER_LIST;
 public class UserController {
     @ModelAttribute
     public UserForm set() {
-        UserForm form = new UserForm();
-        return form;
+        return new UserForm();
     }
 
     @RequestMapping("addNewUser")

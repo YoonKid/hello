@@ -7,7 +7,7 @@ import lombok.Setter;
 @Setter
 public class CalculationForm {
 
-    private int number1;
+    private int numberOne;
 
-    private int number2;
+    private int numberTwo;
 }
