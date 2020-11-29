@@ -13,18 +13,17 @@ import static com.Constants.CALCULATOR;
 public class CalculatorController {
     @ModelAttribute
     public CalculationForm set() {
-        CalculationForm form = new CalculationForm();
-        return form;
+        return new CalculationForm();
     }
     @RequestMapping("calculation")
     public String calculation(CalculationForm form, Model model) {
         CalculatorService result = new CalculatorService();
-        model.addAttribute("number1", form.getNumber1());
-        model.addAttribute("number2", form.getNumber2());
-        model.addAttribute("plusResult", result.plus(form.getNumber1(),form.getNumber2()));
-        model.addAttribute("minusResult", result.minus(form.getNumber1(),form.getNumber2()));
-        model.addAttribute("multipleResult", result.multiple(form.getNumber1(),form.getNumber2()));
-        model.addAttribute("divideResult", result.divide(form.getNumber1(),form.getNumber2()));
+        model.addAttribute("number1", form.getNumberOne());
+        model.addAttribute("number2", form.getNumberTwo());
+        model.addAttribute("plusResult", result.plus(form.getNumberOne(),form.getNumberTwo()));
+        model.addAttribute("minusResult", result.minus(form.getNumberOne(),form.getNumberTwo()));
+        model.addAttribute("multipleResult", result.multiple(form.getNumberOne(),form.getNumberTwo()));
+        model.addAttribute("divideResult", result.divide(form.getNumberOne(),form.getNumberTwo()));
         return CALCULATOR;
     }
 }
